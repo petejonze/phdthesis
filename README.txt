@@ -23,6 +23,9 @@ See <a href="www.sharelatex.com">www.sharelatex.com</a> for a range of other LaT
 ### Acknowledgments
 In making this I also spent a while looking around at other theses classes/templates. I found the University of Edinburgh and the University of Cambridge's particularly useful; thanks guys. This class is in many respects an amalgamation of packages (around 40 or so). Please see the main .cls file for a complete listing.
 
+### License
+GNU GPL v3.0
+
 ### FAQ
 **Q**I've only ever used Word. Will this take me a long time to learn?   
 **A** Probably no longer than you will spend trying to format in Word.
