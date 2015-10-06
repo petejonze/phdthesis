@@ -3,7 +3,7 @@ A LaTeX class (.cls) file to format a PhD thesis (NB: <a href="http://eprints.no
 
 Formatting your thesis can be a very personal, and very rewarding process. However, if you're looking to save time or get some ideas, here is the LaTeX class that I used to format my thesis. It can be used 'as is' - simply plug in your own content and it will do all the formatting for you. Alternatively, it can be easily modified, extended, or plundered for ideas. If you make any changes/improvements please upload them here (join the group to get upload permissions), or send me a relevant link so I can include a reference.
 		
-### Quick Start: Setting up
+## Quick Start: Setting up
 1. Download the Zip archive and unzip it into an appropriate directory
 2. Open example_thesis.tex (e.g., in TexMaker)
 3. Run, either using LaTeX or PDFLatex (F2 and F6 in TexMaker, respecitvely)
@@ -24,15 +24,14 @@ See <a href="www.sharelatex.com">www.sharelatex.com</a> for a range of other LaT
 In making this I also spent a while looking around at other theses classes/templates. I found the University of Edinburgh and the University of Cambridge's particularly useful; thanks guys. This class is in many respects an amalgamation of packages (around 40 or so). Please see the main .cls file for a complete listing.
 
 ### FAQ
-**Q**I've only ever used Word. Will this take me a long time to learn?
+**Q**I've only ever used Word. Will this take me a long time to learn?   
 **A** Probably no longer than you will spend trying to format in Word.
 
-**Q** How do I install LaTeX?
-**A** Installing LaTeX is probably the hardest bit. On windows will need to install the basic engine (e.g., MikTex), and an editor (e.g., Texmaker). If you can't get somebody to help you then there are lots of helpful websites, such as this one.
+**Q** How do I install LaTeX?   
+**A** Installing LaTeX is probably the hardest bit. On windows will need to install the basic engine (e.g., MikTex), and an editor (e.g., Texmaker). If you can't get somebody to help you then there are lots of helpful websites, such as <a href="http://www.howtotex.com/howto/installing-latex-on-windows/">this</a> one.
 
-**Q** I've noticed a bug in file x, what should I do?  
-**A** E-mail and let me know. Better yet, fix it and send me a copy. Or sign up to Git to get direct access to the primary source code.
-
+**Q** I've noticed a bug in file x, what should I do?   
+**A** E-mail me (petejonze AT gmail) and let me know. Better yet, fix it and send me a copy. Or sign up to Git to get direct access to the primary source code.
 
 ### Enjoy!
 @petejonze  
