@@ -3,7 +3,7 @@ A LaTeX class (.cls) file to format a PhD thesis (NB: <a href="http://eprints.no
 
 Formatting your thesis can be a very personal, and very rewarding process. However, if you're looking to save time or get some ideas, here is the LaTeX class that I used to format my thesis. It can be used 'as is' - simply plug in your own content and it will do all the formatting for you. Alternatively, it can be easily modified, extended, or plundered for ideas. If you make any changes/improvements please upload them here (join the group to get upload permissions), or send me a relevant link so I can include a reference.
 		
-## Quick Start: Setting up
+### Quick Start: Setting up
 1. Download the Zip archive and unzip it into an appropriate directory
 2. Open example_thesis.tex (e.g., in TexMaker)
 3. Run, either using LaTeX or PDFLatex (F2 and F6 in TexMaker, respecitvely)
