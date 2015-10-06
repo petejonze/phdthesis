@@ -1,0 +1,154 @@
+\chapter{Commands}
+
+\begin{chapabstract}
+In this chapter the commands included in \verb|ihrthesis.cls| are detailed. The best way to find out about all of these, and to find additional commands, is to look inside the .cls file.
+\end{chapabstract}
+
+
+% ==============================================================================================
+\section{Package flags}
+
+\subsection{Common invocations}
+
+\subsubsection*{Draft version:}
+\begin{verbatim}
+\documentclass[isdraft]{ihrthesis}
+\end{verbatim}
+
+\subsubsection*{Softbound version:}
+\begin{verbatim}
+\documentclass[oneside]{ihrthesis}
+\end{verbatim}
+
+\subsubsection*{Hardbound version:}
+\begin{verbatim}
+\documentclass{ihrthesis}
+\end{verbatim}
+
+\subsubsection*{Misc example:}
+\begin{verbatim}
+\documentclass[twoside, listsintoc, parskip]{ihrthesis}
+\end{verbatim}
+
+\subsection{List of flags}
+
+\begin{center}
+	\begin{longtable}{>{\ttfamily} p{6cm} | >{\small}p{7cm}}
+		isdraft									& condense [single-spaced, no blank page] with additional markups [line numbers, comments]\\[12pt]
+		oneside/twoside							& specify a one-sided or two-sided page layouts\\[12pt]
+		singlespacing/fullspacing/\hfill doublespacing	& amount of vertical line spacing\\[12pt]
+		sansheadings/normalheadings				& headings and captions in sans-serif (default) or in the same font as the rest of the thesis\\[12pt]	
+		ragged									& make right-hand margin tastefully ragged\\[12pt]
+		logo									& put a logo onto the title page\\[12pt]
+		10pt/11pt/12pt							& choose a font size\\[12pt]
+		centrechapter/leftchapter/ rightchapter	& alignment of chapter headings\\[12pt]
+		listsintoc								& put list of figures/tables in table of contents (default: not)\\[12pt]
+		romanprepages/plainprepages				& number the preliminary pages with Roman numerals (default) or consecutively with the rest of the thesis\\[12pt]
+		parskip									& don't indent paragraphs, put a blank line between instead\\[12pt]
+		abbrevs									& define a list of useful abbreviations (see documentation) (default: on)\\[12pt]
+		draft									& supress images and mark overfull hboxes\\[12pt]
+		watermark								& add a 'private' watermark to every page\\[12pt]							
+	\end{longtable}
+\end{center}							
+
+
+% ==============================================================================================
+\section{Main doc commands}
+See \verb|example_thesis_1.tex|
+
+
+% ==============================================================================================
+\section{Public environments and commands}
+
+\begin{center}
+	\begin{longtable}{>{\ttfamily} r | >{\small}l}
+		chapabstract			& \verb|\begin{chapabstract}|\\
+								& \verb|	YOUR TEXT|\\
+								& \verb|\end{chapabstract}|\\[6pt]
+		quotetext				& \verb|\begin{quotetext}{AUTHOR}|\\
+								& \verb|	YOUR TEXT|\\
+								& \verb|\end{quotetext}|\\[6pt]
+		marginnote				& \verb|\marginnote{YOUR TEXT}|\\[6pt]
+		endnote					& \verb|\endnote{YOUR TEXT}|\\
+								& followed somewhere by: \verb|\theendnotes|\\[6pt]
+		lstinputlisting			& \verb|\begin{lstlisting}|\\
+								& \verb|	YOUR TEXT|\\
+								& \verb|\end{lstlisting}|\\[6pt]
+		lstlisting				& \verb|\lstinputlisting[language=matlab]{FILENAME}|\\[6pt]
+		%floatrow				& see the floatrow package\\[6pt]
+		chapacknowledgements	& \verb|\begin{chapacknowledgements}|\\
+								& \verb|	YOUR TEXT|\\
+								& \verb|\end{chapacknowledgements}|\\[6pt]
+		mathlist\footnote{Untested / Possibly-buggy}		& \verb|mathlist{x,y,z}|\\[6pt]
+		url						& \verb|\url{YOUR TEXT}|\\[6pt]
+		superscript				& \verb|\superscript{YOUR TEXT}|\\[6pt]
+	\end{longtable}
+\end{center}
+
+
+% ==============================================================================================
+\section{Protected commands}
+The following are also used within the thesis class, but are unlikely to be required elsewhere.
+
+\begin{center}
+	\begin{longtable}{>{\ttfamily} r | >{\small}l}
+		refstyle			& \verb|refstyle|\\[6pt]
+		ChapterOutsidePart				& \verb|ChapterOutsidePart|\\[6pt]
+	\end{longtable}
+\end{center}
+
+
+% ==============================================================================================
+\section{Abbreviations}
+\label{sec:abbreviations}
+
+\begin{center}
+	\begin{longtable}{>{\ttfamily} r | >{\small}l}
+		\verb|\ns|			& \ns \\
+		\verb|\cf|			& \cf \\
+		\verb|\NB|			& \NB \\
+		\verb|\nb|			& \nb \\		
+		\verb|\eg|			& \eg \\
+		\verb|\Eg|			& \Eg \\
+		\verb|\ie|			& \ie \\
+		\verb|\Ie|			& \Ie \\	
+		\verb|\etc|			& \etc \\
+		\verb|\etal|		& \etal \\
+		\verb|\etseq|		& \etseq \\
+		\verb|\precis|		& \precis \\		
+		\verb|\Precis|		& \Precis \\
+		\verb|\role|		& \role \\
+		\verb|\Role|		& \Role \\
+		\verb|\naive|		& \naive \\		
+		\verb|\Naive|		& \Naive \\
+		\verb|\cpright|		& \cpright \\
+		\verb|\degrees|		& \degrees \\
+		\verb|\iid|			& \iid \\	
+		\verb|\dprime|		& \dprime \\
+		\verb|\about|		& \about \\
+		\verb|\tickmark|	& \tickmark \\
+		\verb|\crossmark|	& \crossmark \\
+		\verb|\yo|			& \yo \\
+		\verb|\yos|			& \yos \\		
+		\verb|\th|			& \th \\
+		\verb|\st|			& \st \\
+		\verb|\nd|			& \nd \\
+		\verb|\th|			& \th \\		
+		\verb|\rd|			& \rd \\
+		\verb|\fref{TEXT}|		& \fref{TEXT} \\
+		\verb|\tref{TEXT}|		& \tref{TEXT} \\
+		\verb|\eref{TEXT}|		& \eref{TEXT} \\
+		\verb|\cref{TEXT}|		& \cref{TEXT} \\		
+		\verb|\sref{TEXT}|		& \sref{TEXT} \\
+		\verb|\aref{TEXT}|		& \aref{TEXT} \\
+		\verb|\Fref{TEXT}|		& \Fref{TEXT} \\
+		\verb|\Tref{TEXT}|		& \Tref{TEXT} \\
+		\verb|\Eref{TEXT}|		& \Eref{TEXT} \\
+		\verb|\Cref{TEXT}|		& \Cref{TEXT} \\		
+		\verb|\Sref{TEXT}|		& \Sref{TEXT} \\
+		\verb|\Aref{TEXT}|		& \Aref{TEXT} \\									
+	\end{longtable}
+\end{center}
+
+
+%% EOF

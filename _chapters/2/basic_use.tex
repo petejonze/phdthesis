@@ -1,0 +1,79 @@
+\chapter{Basic Use}
+\label{chap:basicUse}
+
+\begin{chapabstract}
+In this chapter we present a minimum working example of a fully-formatted thesis chapter. Most of the core fundamentals will be introduced. By the end of this chapter you should be well on your way to making your own thesis.
+\end{chapabstract}
+
+Writing text in \LaTeX is quite simple. By using the appropriate commands, we can make the font style \textbf{bold}, \textit{italic}, \texttt{typewritten}, \textsc{small cap}, `things in quotes', ``things in double quotes'', hyphenate-things and so forth. We can cite previous studies, such as \cite{testington2011effects}, or any others you have saved in your bibtex file \citep[\eg][]{neddis2009best, jones1986coping}. As you will see in \sref{sec:exampleSection}, we can also reference other parts of this document.
+
+
+% ==============================================================================================
+\section{Graphics, tables and equations}
+\label{sec:exampleSection} % create a reference handle, for reference elsewhere
+
+%------------------------------------------------------------------------------
+\subsection{A figure}
+An example figure is given In \fref{fig:exampleFigure}.
+
+\begin{figure}[H]
+\includegraphics[scale=.3]{figs/exampleFigure}
+\caption[short caption to appear in list of figures]
+{
+long title to accompany the figure. Note that since we didn't specify the file extension, the class will automatically search for an appropriate file with the stem `exampleFigure'. If you are using the PdfLatex engine, it will search for .pdf or bitmap files (\eg~.png, .jpg). If you are using the Latex engine, it will search for vector files (\eg~.eps, .svg). The recommended approach is to use .pdf figures.
+}
+\label{fig:exampleFigure}
+\end{figure}
+
+
+%------------------------------------------------------------------------------
+\subsection{A table}
+An example table is given In \fref{tab:exampleTable}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccccr}
+\toprule
+id&score&q-factor&y-factor&fraud-rate&notes\\
+\midrule
+PJ	& 70.4 & 9	& 9 	& 22.1 & \textit{highly questionable}\\
+NJ	& 46.9 & 8	& 11 & 17.9 &\\
+CT& 90.0 & 13	& 6 	& 19.2 & \textit{exemplary}\\
+\bottomrule
+\end{tabular}
+\caption[short caption to appear in list of tables]
+{
+long title to accompany the table.
+}
+\label{tab:exampleTable}
+\end{table}
+
+%------------------------------------------------------------------------------
+\subsection{An equation}
+Numbered equations can be entered into Matlab thus:
+\begin{equation}
+c^2 = a^2 + b^2 \textrm{.}
+\label{eq:exampleEquation}
+\end{equation}
+The equation environment was used to create \eref{eq:exampleEquation}. We can also type maths inline, within the body of the text. This can be of useful, for example, when reporting statistics [$F_{(2,3)} = 4.2, p = .002, \eta^{2}_{p} = 0.7$].
+
+
+% ==============================================================================================
+\section{Conclusions}
+
+By editing this chapter you should now be able to:
+\begin{enumerate}[(1)]
+\item Insert text.
+\item Divide a chapter into separate sections
+\item Insert graphics, tables and equations
+\item Link to sections and graphics
+\item Add key components, such as abstracts and acknowledgments, appendices, etc.
+\end{enumerate}
+
+
+% ==============================================================================================
+\begin{chapacknowledgements}
+This work was supported by the Medical Research Council, UK (Grant: U135097130).
+\end{chapacknowledgements}
+
+%% EOF

@@ -1,0 +1,20 @@
+#############
+## ivis
+#############
+admin/
+.svn/
+__TRASH/
+_private/
+_metadat/
+
+*.aux
+*.ent
+*.glo
+*.idx
+*.ist
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc

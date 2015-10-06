@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Version History:
+%%
+%%	[10/11/12]	1.0.0	Basic skeleton
+%%	[02/10/15]	1.1.0	Updated version, showing alternative document classes (for use with ihrthesis.cls v1.3.0)
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Load the class. See the documentation for the list of options).
+%\documentclass[isdraft, logo, abbrevs, a4paper, listsintoc, draft]{phdthesis} % example draft version (additional 'draft' command also supresses images for faster rendering)
+%\documentclass[oneside, logo, abbrevs, a4paper, listsintoc, parskip, 12pt]{phdthesis} % example viva version
+\documentclass[twoside, logo, abbrevs, a4paper, listsintoc, parskip, singlespace, 11pt]{phdthesis} % example final submission version
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Load any additional materials
+\include{_packages/custom_packages}
+\include{_glossary/glossary} % load glossary
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Specify the covering meta info
+\title{PhDthesis.cls -- Oh no! Yet another LaTeX thesis class}
+\author{Pete R Jones}
+\email{petejonze@gmail.com}
+\submityear{\the\year}
+\university{University of Nottingham}
+\school{School of Psychology}
+\institute{MRC Institute of Hearing Research}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Now we start with the actual document.
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Create the preliminary pages
+\begin{preliminary}
+\maketitle
+\abstract{\input{_frontmatter/abstract}}
+\declaration{\input{_frontmatter/declaration}}
+\acknowledgements{\input{_frontmatter/acknowledgements}}
+\frontmatter{Copyright Permissions}{\input{_frontmatter/permissions}}
+\dedication{\input{_frontmatter/dedication}}
+%% toc
+\nomenclature
+\tableofcontents
+\listoffigures
+\listoftables
+\end{preliminary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Specify the chapter files
+\part{Example chapters} % the use of \part's is not recommended, but is shown here for completeness.
+\subimport{_chapters/1/}{absurdly_basic_use.tex}
+\subimport{_chapters/2/}{basic_use.tex}
+\subimport{_chapters/3/}{advanced_use.tex}
+\part{Command list}
+\subimport{_chapters/4/}{odds_and_ends.tex}
+\subimport{_chapters/5/}{commands.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Any appendices should go here. The appendix files should look just like the
+% chapter files.
+\ChapterOutsidePart
+\appendix
+\subimport{_backmatter/appendices/1/}{supplementary_info_I}
+\subimport{_backmatter/appendices/1/}{supplementary_info_II}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bibliography
+\bibliography{_references/exampleRefs} %% Specify the bibliography file
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% All done!
+\end{document}

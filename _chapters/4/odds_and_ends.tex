@@ -1,0 +1,28 @@
+\chapter{Odds and ends}
+
+\begin{chapabstract}
+In this chapter we introduce some extra things that we couldn't fit in elsewhere. Experimenting with some of the things covered here will require going into the .cls source-file.
+\end{chapabstract}
+
+% ==============================================================================================
+\section{The font}
+The standard font is Bitstream-Charter. It is a bit strong/nicer than the standard modern. It has a fairly comprehensive set of mathmatical symbols, and can be scaled (\eg for use with dropcaps). The font can be changed by editing line in the .cls that reads: \verb|\renewcommand{\familydefault}{bch}|
+
+% ==============================================================================================
+\section{Filler text}
+\lipsum[2]
+
+% ==============================================================================================
+\section{Comments}
+It is \fxerror{sometimes}{somtimes} nice to be able too flag up errors for \fxerror{correction}{corection}. This can be done \fxerror{using}{useing} the \verb|fixme| package, \fxerror{which}{witch} allows you to write comments that appear in the margin. This paragraph contains a \fxerror{number}{numbr} of such comments. Can't see them? They are suppresed in final mode. Try running \verb|example_thesis_v1.tex| again, but this time using: \verb|\documentclass[isdraft, oneside, logo]{ihrthesis}|
+
+% ==============================================================================================
+\section{General tips}
+Check the .log file for useful warnings, such as those concerning undefined references and citations.
+
+% ==============================================================================================
+\begin{chapacknowledgements}
+This work was supported by the Medical Research Council, UK (Grant: U135097130).
+\end{chapacknowledgements}
+
+%% EOF

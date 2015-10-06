@@ -1,0 +1,50 @@
+%\pgfmathdeclarefunction{cgauss}{2}{%
+%  \pgfmathparse{0.5 * (1 - 1/30 * (7*exp(-(x^2)/2) + 16*exp(-x^2 * (2-sqrt(2))) + (7 + 1/4 * pi * x^2)*exp(-x^2) ))}% Bagby (1995)  cdf approximation
+%}
+\pgfmathdeclarefunction{logisticCDF}{2}{%
+  \pgfmathparse{1 / (1 + exp(-(x-#1)/#2))}%
+}
+
+\begin{tikzpicture}[scale=1.1]
+\begin{axis}[every axis plot post/.append style={%
+  domain=-5:5,
+  samples=50,
+  smooth,
+  },
+	xmin=-2,
+  	xmax=4.5,
+  	ymin=0,
+  	ymax=1,
+	ylabel = {P(\textit{`Signal Present'})},
+	xlabel = {Stimulus Strength, $x$},
+	ytick={0,.25,.5,.75,1},
+	%xtick={-2,0,1,2,4},
+	%x tick label style={major tick length=0pt},
+	%xticklabels={,0,$\Delta_{lim}$,$\Delta_{lim}$,},
+	xtick={-1,0,1,2,3,4},
+	xticklabels={-1,0,1,2,3,4},
+  % All plots: from -2:2, 50 samples, smooth, no marks
+  axis x line*=bottom, 		% no box around the plot, only x and y axis
+  axis y line=left,
+  enlargelimits=upper,
+  legend entries={line 1, line 2, line 3},
+  legend pos= south east,
+  legend cell align=left,
+  legend style={draw=none, font=\scriptsize} % remove border
+  ] 		% extend the axes a bit to the right and top
+
+  
+  \addplot+[thick,mark=none] {logisticCDF(0,1)};
+  \addplot+[thick,mark=none] {logisticCDF(-1,2)};
+  \addplot+[thick,mark=none] {logisticCDF(1,1)};
+
+  \draw[dashed, -] ({axis cs:-5,.725}) -- ({axis cs:1.96,.725});
+  \draw[dashed, ->] ({axis cs:.96,.725}) -- ({axis cs:.96,0});
+  \draw[dashed, ->] ({axis cs:1.96,.725}) -- ({axis cs:1.96,0});
+  
+  \addplot[only marks, mark=o, color=black] plot coordinates {(-1,0.5)};
+  \addplot[only marks, mark=o, color=black] plot coordinates {(0,0.5)};
+  \addplot[only marks, mark=o, color=black] plot coordinates {(1,0.5)};
+  
+\end{axis}
+\end{tikzpicture}
