@@ -125,8 +125,7 @@
 %% - tocbibind 		% to put LOF and LOT into table of contents
 %% - tocloft		% for TOC alignment tweaks
 %% FONTS AND CHARACTERS
-%% - tgheros		% font
-%% - pifont			% font
+%% - pifont			% additional font, with support for dingbats, symbols, etc. (e.g., ticks and crosses)
 %% - inputenc 		% Maps certain characters to their corresponding TeX macros
 %% - textcomp 		% Provides extra symbols (useful for listings)
 %% PAGE ELEMENTS
@@ -180,7 +179,7 @@
 \newboolean{usesinglespacing}
 \newboolean{usedoublespacing}
 \newboolean{usefullspacing}
-\newboolean{useabbrevs}
+\newboolean{abbrevs}
 \newboolean{sansheadings}
 \newboolean{ltoc}
 \newboolean{romanpre}
@@ -224,7 +223,7 @@
    \renewcommand{\@draftmessage}{(Draft Copy)\\ \jobname\\ \today }}
    
 %% Use useful abbrevations?
-\DeclareOption{abbrevs}{\setboolean{useabbrevs}{true}}
+\DeclareOption{abbrevs}{\setboolean{abbrevs}{true}}
 
 %% Select spacing (default: fullspacing)
 \DeclareOption{singlespace}{\setboolean{usesinglespacing}{true}}
@@ -710,7 +709,7 @@
 
 
 %-------------------------- Fonts --------------------------
-\usepackage{tgheros,pifont}
+\usepackage{pifont} % for (Dingbats, Symbol, etc.)
 				
 %% Bitstream Charter is a popular, free, serif typeface7. It has native support for mathematical typesetting, and is fully scalable (e.g., allowing %% it to support custom stylings, such as chapter-initial dropcaps). It is somewhat stronger than the standard modern font, making it better suited %% to low-resolution printing and e-reading.
 \renewcommand{\familydefault}{bch}
@@ -1110,7 +1109,7 @@
 
 %-------------------------- Common Abbreviations -----------------------------
 %% Some sundry abbreviations which are generally useful...
-\ifthenelse{\boolean{useabbrevs}}
+\ifthenelse{\boolean{abbrevs}}
 {
 \newcommand{\ns}{n.s.\@\xspace}
 \newcommand{\cf}{cf.\@\xspace}
