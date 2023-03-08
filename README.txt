@@ -1,5 +1,5 @@
 ### Project Description
-A LaTeX class (.cls) file to format a PhD thesis (NB: [this](http://eprints.nottingham.ac.uk/13376/1/pj_thesis_v2_1_2.pdf) is what it ended up looking like).
+A LaTeX class (.cls) file to format a PhD thesis (NB: this is what it ended up looking like: http://eprints.nottingham.ac.uk/13376/1/pj_thesis_v2_1_2.pdf).
 
 Formatting your thesis can be a very personal, and very rewarding process. However, if you're looking to save time or get some ideas, here is the LaTeX class that I used to format my thesis. It can be used 'as is' - simply plug in your own content and it will do all the formatting for you. Alternatively, it can be easily modified, extended, or plundered for ideas. If you make any changes/improvements please upload them here (join the group to get upload permissions), or send me a relevant link so I can include a reference.
 		
@@ -18,7 +18,7 @@ LaTeX2e (released 1994). This is free software is distributed under the LaTeX Pr
 No multi-lingual support at the moment. I played with Babel briefly, but it had a few bugs that needed ironing out.
 
 ### Other good LaTeX classes
-See <a href="www.sharelatex.com">www.sharelatex.com</a> for a range of other LaTeX thesis classes, or just search on GitHub
+See www.sharelatex.com
 
 ### Acknowledgments
 In making this I also spent a while looking around at other theses classes/templates. I found the University of Edinburgh and the University of Cambridge's particularly useful; thanks guys. This class is in many respects an amalgamation of packages (around 40 or so). Please see the main .cls file for a complete listing.
