@@ -31,7 +31,7 @@ GNU GPL v3.0
 **A** Probably no longer than you will spend trying to format in Word.
 
 **Q** How do I install LaTeX?   
-**A** Installing LaTeX is probably the hardest bit. On windows will need to install the basic engine (e.g., MikTex), and an editor (e.g., Texmaker). If you can't get somebody to help you then there are lots of helpful websites, such as <a href="http://www.howtotex.com/howto/installing-latex-on-windows/">this</a> one.
+**A** On windows you will need to install the basic engine (e.g., MikTex), and an editor (e.g., Texmaker). For more info, see: http://www.howtotex.com/howto/installing-latex-on-windows
 
 **Q** I've noticed a bug in file x, what should I do?   
 **A** E-mail me (petejonze AT gmail) and let me know. Better yet, fix it and send me a copy. Or sign up to Git to get direct access to the primary source code.
