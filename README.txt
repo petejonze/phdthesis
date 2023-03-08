@@ -1,5 +1,5 @@
 ### Project Description
-A LaTeX class (.cls) file to format a PhD thesis (NB: <a href="http://eprints.nottingham.ac.uk/13376/1/pj_thesis_v2_1_2.pdf">this</a> is what it ended up looking like).
+A LaTeX class (.cls) file to format a PhD thesis (NB: [this](http://eprints.nottingham.ac.uk/13376/1/pj_thesis_v2_1_2.pdf) is what it ended up looking like).
 
 Formatting your thesis can be a very personal, and very rewarding process. However, if you're looking to save time or get some ideas, here is the LaTeX class that I used to format my thesis. It can be used 'as is' - simply plug in your own content and it will do all the formatting for you. Alternatively, it can be easily modified, extended, or plundered for ideas. If you make any changes/improvements please upload them here (join the group to get upload permissions), or send me a relevant link so I can include a reference.
 		
